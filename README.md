@@ -1,11 +1,12 @@
 RoboBlather
 ===========
 
-A basic text-to-speech application for Windows.
+A basic text-to-speech application for Windows originally released at
+http://zetacentauri.com
 
-A compiled version of this program with installer is available here:
+![RobotBlather Screenshot](https://github.com/Xangis/RoboBlather/blob/master/Images/TextToSpeechScreenshot.png)
 
-http://zetacentauri.com/software_roboblather.htm
+A prebuilt installer is available in the installer directory.
 
 This application was written using C# .NET 3.0 and should run on any system that
 supports .NET 3.0. It has been tested on Windows XP, Vista, 7, and 8. A project is
