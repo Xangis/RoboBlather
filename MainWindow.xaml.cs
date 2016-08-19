@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
 using System.Speech.Synthesis;
+using Microsoft.Win32;
 
 namespace RoboBlather
 {
@@ -103,7 +104,18 @@ namespace RoboBlather
             prompt.AppendTextWithHint(txtInput.Text, _sayAs);
             prompt.EndStyle();
             prompt.EndVoice();
-            _synth.SpeakAsync(prompt);
+            if (chkWriteFile.IsChecked != false)
+            {
+                txtFilename.Background = Brushes.Green;
+                this.UpdateLayout();
+                _synth.Speak(prompt);
+                txtFilename.Background = Brushes.Black;
+                MessageBox.Show("Audio render complete.");
+            }
+            else
+            {
+                _synth.SpeakAsync(prompt);
+            }
         }
 
         void StopClick(object sender, EventArgs e)
@@ -113,7 +125,7 @@ namespace RoboBlather
 
         void AboutClick(object sender, EventArgs e)
         {
-            MessageBox.Show("RoboBlather Version 1 (Freeware)\nCopyright (c) 2008-2013 Zeta Centauri, Inc.\nhttp://www.zetacentauri.com\n\nWritten by Jason Champion.\n", "About RoboBlather");
+            MessageBox.Show("RoboBlather Version 1.1 (Freeware)\nCopyright (c) 2008-2016 Zeta Centauri\nhttp://zetacentauri.com\n\nWritten by Jason Champion.\n", "About RoboBlather");
         }
 
         void WriteFileOn(object sender, RoutedEventArgs e)
@@ -144,6 +156,27 @@ namespace RoboBlather
         void SpellOutOn(object sender, RoutedEventArgs e)
         {
             _sayAs = SayAs.SpellOut;
+        }
+
+        private void BrowseClick(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.AddExtension = true;
+            saveFileDialog.DefaultExt = ".wav";
+            saveFileDialog.FileName = txtFilename.Text;
+            if (saveFileDialog.ShowDialog() == true)
+                txtFilename.Text = saveFileDialog.FileName;
+        }
+
+        private void txtFilename_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void windowSizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            txtInput.Width = e.NewSize.Width - 24;
+            txtInput.Height = e.NewSize.Height - 144;
         }
 
         //void SetMaleVoice(object sender, RoutedEventArgs e)

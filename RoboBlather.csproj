@@ -120,5 +120,8 @@
   <ItemGroup>
     <Resource Include="RoboBlather.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Changes.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
