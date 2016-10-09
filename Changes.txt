@@ -1,4 +1,8 @@
-﻿Changes from Version 1.0 to 1.1:
+﻿Changes from Version 1.1 to 1.2:
+
+- Interface changed from black and yellow to non-inverse (plain) colors.
+
+Changes from Version 1.0 to 1.1:
 
 - Added window icon.
 - Text window accepts multi-line text output.

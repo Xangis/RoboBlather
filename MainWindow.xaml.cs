@@ -125,7 +125,7 @@ namespace RoboBlather
 
         void AboutClick(object sender, EventArgs e)
         {
-            MessageBox.Show("RoboBlather Version 1.1 (Freeware)\nCopyright (c) 2008-2016 Zeta Centauri\nhttp://zetacentauri.com\n\nWritten by Jason Champion.\n", "About RoboBlather");
+            MessageBox.Show("RoboBlather Version 1.2 (Freeware)\nCopyright (c) 2008-2016 Zeta Centauri\nhttp://zetacentauri.com\n\nWritten by Jason Champion.\n", "About RoboBlather");
         }
 
         void WriteFileOn(object sender, RoutedEventArgs e)
@@ -170,13 +170,20 @@ namespace RoboBlather
 
         private void txtFilename_TextChanged(object sender, TextChangedEventArgs e)
         {
-
         }
 
         private void windowSizeChanged(object sender, SizeChangedEventArgs e)
         {
             txtInput.Width = e.NewSize.Width - 24;
             txtInput.Height = e.NewSize.Height - 144;
+        }
+
+        private void OnInputFocus(object sender, RoutedEventArgs e)
+        {
+            if (txtInput.Text == "Type or paste text to be spoken here.")
+            {
+                txtInput.Text = "";
+            } 
         }
 
         //void SetMaleVoice(object sender, RoutedEventArgs e)
