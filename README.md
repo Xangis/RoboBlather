@@ -44,6 +44,10 @@ This was originally released as a proprietary but free application for Windows a
 been downloaded more than 25,000 times. Since there's no longer a business behind it, 
 there's no reason not to make it open source.
 
+There was some effort made to use the Desktop App Converter to package this for the
+Windows Store, but it never quite made it. There's a package.bat file in the installer
+directory with progress so far.
+
 I do not actively maintain this application, but will accept pull requests. There are
 probably things to be done to make it easier to build and run since I've been the only
 developer and the project may make assumptions about paths and development environment
@@ -51,3 +55,4 @@ that only apply to me.
 
 I do sometimes still use it to generate .wav files of robot speech. To my knowledge, it's
 the quickest, easiet, and free-est way to do so on a Windows machine.
+
