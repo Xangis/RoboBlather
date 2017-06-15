@@ -17,7 +17,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration( "" )]
 [assembly: AssemblyCompany( "Zeta Centauri" )]
 [assembly: AssemblyProduct( "RoboBlather" )]
-[assembly: AssemblyCopyright( "Copyright @ 2008-2016 Zeta Centauri" )]
+[assembly: AssemblyCopyright( "Copyright @ 2008-2017 Jason Champion" )]
 [assembly: AssemblyTrademark( "" )]
 [assembly: AssemblyCulture( "" )]
 [assembly: ComVisible( false )]
