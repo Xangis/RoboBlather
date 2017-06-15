@@ -24,7 +24,6 @@ namespace RoboBlather
         SpeechSynthesizer _synth = null;
         System.Speech.Synthesis.SayAs _sayAs = SayAs.Text;
         System.Speech.Synthesis.PromptRate _rate = PromptRate.Medium;
-        bool _waveFile = false;
         public Window1()
         {
             InitializeComponent();
@@ -125,12 +124,11 @@ namespace RoboBlather
 
         void AboutClick(object sender, EventArgs e)
         {
-            MessageBox.Show("RoboBlather Version 1.2 (Freeware)\nCopyright (c) 2008-2016 Zeta Centauri\nhttp://zetacentauri.com\n\nWritten by Jason Champion.\n", "About RoboBlather");
+            MessageBox.Show("RoboBlather Version 1.2 (MIT License)\nCopyright (c) 2008-2017 Jason Champion\nhttp://xangis.com", "About RoboBlather");
         }
 
         void WriteFileOn(object sender, RoutedEventArgs e)
         {
-            _waveFile = true;
             _synth.SpeakAsyncCancelAll();
             if (!String.IsNullOrEmpty(txtFilename.Text))
             {
@@ -144,7 +142,6 @@ namespace RoboBlather
 
         void WriteFileOff(object sender, RoutedEventArgs e)
         {
-            _waveFile = false;
             _synth.SetOutputToDefaultAudioDevice();
         }
 
