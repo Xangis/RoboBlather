@@ -1,11 +1,13 @@
 # RoboBlather
 
-![RoboBlather Screenshot](https://github.com/Xangis/RoboBlather/blob/master/Images/RoboBlather1.2OnWindows10.png)
+RoboBlather is a text-to-speech application for Windows. 
 
-RoboBlather is a text-to-speech application for Windows. It uses the built-in speech 
-synthesis power of the .NET Framework 3.0 to generate speech from whatever text you 
-paste into  the edit window. You can control the speed of the voice, render the output
-to a .wav file, and select any of the installed voices on your machine. 
+![RoboBlather Screenshot](https://github.com/Xangis/RoboBlather/blob/master/Images/RoboBlather1.21OnWindows10.png)
+
+RoboBlather uses the built-in speech synthesis power of the .NET Framework 3.0 
+(and newer) to generate speech from whatever text you paste into the edit window.
+You can control the speed of the voice, render the output to a .wav file, and 
+select any of the installed voices on your machine. 
 
 On my development machines, these are the voices that were available:
 
@@ -25,6 +27,10 @@ On my development machines, these are the voices that were available:
 
 ![Windows 10 Voices](https://github.com/Xangis/RoboBlather/blob/master/Images/TextToSpeechVoiceListWindows10.png)
 
+### Windows 10 with all voices installed:
+
+![Windows 10 All Voices](https://github.com/Xangis/RoboBlather/blob/master/Images/TextToSpeechVoiceListWindows10Full.png)
+
 The list of available voices will vary based on the software you have installed on 
 your system, but with the .NET framework installed you should have one or more voices
 and in many cases new voices can be added.
@@ -35,18 +41,42 @@ In addition, Microsoft Mike, Sam, and Mary can be added using the Microsoft TTS 
 v1.3 installer found in this forum thread: 
 http://www.eightforums.com/customization/23916-microsoft-anna-windows-8-a-6.html.
 
-This was originally released at http://zetacentauri.com/software_roboblather.htm
+This was originally released at http://zetacentauri.com/software_roboblather.htm 
+and was downloaded more than 25,000 times before being open-sourced.
 
-A prebuilt installer is available in the installer directory here: https://github.com/Xangis/RoboBlather/blob/master/Installer/RoboBlather1.2Setup.exe
+A prebuilt installer is available in the installer directory here: https://github.com/Xangis/RoboBlather/blob/master/Installer/RoboBlather1.21Setup.exe
 
-This application was written using C# .NET 3.0 and should run on any system that
+General Notes:
+
+- Wave file is recorded as 22050 Hz mono.
+
+# Building
+
+This application was written using C# .NET 3.0 and should build on any system that
 supports .NET 3.0 or newer fully. It has been tested on Windows XP, Vista, 7, 8, and 10. 
 A project is included for Visual Studio 2010, but it should open just fine in newer
 versions. It doesn't have any dependencies other than the .NET framework.
 
 An installer script for InnoSetup is included in the installer directory, but you'll
-probably have to modify the paths in order for it to work on your system. There's also
-also an older NSIS installer that could probably be modified to work.
+probably have to modify the paths in order for it to work on your system.
+
+# Changelog
+
+﻿### Changes in Version 1.21 (July 2017):
+
+- Added "Load Text" button to load a text file.
+
+### Changes in Version 1.2:
+
+- Interface changed from black and yellow to non-inverse (plain) colors.
+
+### Changes in Version 1.1:
+
+- Added window icon.
+- Text window accepts multi-line text output.
+- Added browse button for output filename.
+- All now gives a notification when audio file rendering is complete.
+- Text box resizes to grow/shrink with window size.
 
 ## Known Issues
 
@@ -56,7 +86,7 @@ synthesizer that it doesn't close a file when audio is rendered (because it expe
 keep saying things). This may be fixable via a code change, but I haven't really looked
 into it.
 
-## Development Status
+# Development Status
 
 This was originally released as a proprietary but free application for Windows and has
 been downloaded more than 25,000 times. Since there's no longer a business behind it, 

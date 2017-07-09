@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
 
 using System.Speech.Synthesis;
 using Microsoft.Win32;
@@ -124,7 +125,7 @@ namespace RoboBlather
 
         void AboutClick(object sender, EventArgs e)
         {
-            MessageBox.Show("RoboBlather Version 1.2 (MIT License)\nCopyright (c) 2008-2017 Jason Champion\nhttp://xangis.com", "About RoboBlather");
+            MessageBox.Show("RoboBlather Version 1.21 (MIT License)\nCopyright (c) 2008-2017 Jason Champion\nhttp://xangis.com", "About RoboBlather");
         }
 
         void WriteFileOn(object sender, RoutedEventArgs e)
@@ -177,10 +178,22 @@ namespace RoboBlather
 
         private void OnInputFocus(object sender, RoutedEventArgs e)
         {
-            if (txtInput.Text == "Type or paste text to be spoken here.")
+            if (txtInput.Text == "Type or paste text to be spoken here or load a text file with the 'Load Text' button.")
             {
                 txtInput.Text = "";
             } 
+        }
+
+        private void LoadClick(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Open Text File";
+            openFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
+            if (openFileDialog.ShowDialog() == true)
+            {
+                String filename = openFileDialog.FileName;
+                txtInput.Text = File.ReadAllText(filename);
+            }
         }
 
         //void SetMaleVoice(object sender, RoutedEventArgs e)

@@ -4,24 +4,26 @@
     Title="RoboBlather" Height="444" Width="424" Icon="/RoboBlather;component/RoboBlather.ico" SizeChanged="windowSizeChanged" MinWidth="424" MinHeight="184">
   <StackPanel>
     <StackPanel Orientation="Horizontal">
-      <TextBox Name="txtInput" Width="400" Height="300" ScrollViewer.VerticalScrollBarVisibility="Visible" Text="Type or paste text to be spoken here." Margin="3" ToolTip="Text to be spoken." AcceptsReturn="True" GotFocus="OnInputFocus" >
+            <TextBox Name="txtInput" Width="400" Height="300" ScrollViewer.VerticalScrollBarVisibility="Visible" TextWrapping="Wrap" Text="Type or paste text to be spoken here or load a text file with the 'Load Text' button." Margin="3" ToolTip="Text to be spoken." AcceptsReturn="True" GotFocus="OnInputFocus">
       </TextBox>
     </StackPanel>
     <StackPanel Orientation="Horizontal">
-      <Button Name="bSpeak" Content="Speak" Height="24" Width="75" VerticalAlignment="Center" Margin="3" Click="SpeakClick" ToolTip="Speak or Render the Text." />
-      <Button Name="btnStop" Content="Stop" Height="24" Width="75" VerticalAlignment="Center" Margin="3" Click="StopClick" ToolTip="Stop speaking." />
-      <TextBlock Text="Speed: " Width="44" VerticalAlignment="Center" Margin="12,3,3,3" />
-      <ComboBox Name="cbSpeed" VerticalAlignment="Center" Width="86" SelectionChanged="SpeedSelectionChanged" Margin="3" ToolTip="Speed to speak the text." />
-      <Button Name="btnAbout" Content="?" Height="24" Width="24" VerticalAlignment="Center" Margin="18,3,3,3" Click="AboutClick" ToolTip="About TextToSpeech." />
+            <Button Name="bLoad" Content="Load Text" Height="24" Width="69" VerticalAlignment="Center" Margin="3" Click="LoadClick" ToolTip="Load a text file." />
+            <Button Name="bSpeak" Content="Speak" Height="24" Width="69" VerticalAlignment="Center" Margin="3" Click="SpeakClick" ToolTip="Speak or Render the Text." />
+      <Button Name="btnStop" Content="Stop" Height="24" Width="69" VerticalAlignment="Center" Margin="3" Click="StopClick" ToolTip="Stop speaking." />
+      <TextBlock Text="Speed: " Width="44" Margin="6,1,1,1" Height="20" />
+      <ComboBox Name="cbSpeed" Width="86" SelectionChanged="SpeedSelectionChanged" Margin="3" ToolTip="Speed to speak the text." />
+      <Button Name="btnAbout" Content="?" Height="24" Width="24" Margin="3,3,3,3" Click="AboutClick" ToolTip="About TextToSpeech." />
     </StackPanel>
     <StackPanel Orientation="Horizontal">
       <CheckBox Name="chkWriteFile" Content="Render to File" Checked="WriteFileOn" VerticalAlignment="Center" Unchecked="WriteFileOff" Margin="3" ToolTip="If checked, renders audio to a .wav file.  If unchecked, speaks it aloud."></CheckBox>
       <CheckBox Name="chkSpellOut" Content="Spell Out" Margin="12,3,3,3" VerticalAlignment="Center"  Checked="SpellOutOn" Unchecked="SpellOutOff" ToolTip="If checked, robot will speak the text as letters."></CheckBox>
-      <TextBlock Text="Voice: " Width="44" VerticalAlignment="Center" Margin="18,3,3,3" />
-      <ComboBox Name="cbVoice" VerticalAlignment="Center" Width="108" SelectionChanged="VoiceSelectionChanged" Margin="3" ToolTip="Voice to use when speaking." />
+      <TextBlock Text="Voice: " Width="40" VerticalAlignment="Center" Margin="15,3,3,3" />
+      <ComboBox Name="cbVoice" VerticalAlignment="Center" Width="157" SelectionChanged="VoiceSelectionChanged" Margin="3" ToolTip="Voice to use when speaking." />
     </StackPanel>
     <StackPanel Orientation="Horizontal">
-            <TextBox Name="txtFilename" Width="312" Height="24" Text="Speech.wav" Margin="3" ToolTip="File to save rendered audio to." TextChanged="txtFilename_TextChanged"></TextBox>
+            <Label>Output File:</Label>
+                <TextBox Name="txtFilename" Width="241" Height="24" Text="Speech.wav" Margin="3" ToolTip="File to save rendered audio to." TextChanged="txtFilename_TextChanged"></TextBox>
             <Button Name="btnBrowse" Content="Browse" Height="24" Width="75" VerticalAlignment="Center" Margin="3" Click="BrowseClick" ToolTip="Select output file." />
         </StackPanel>
   </StackPanel>

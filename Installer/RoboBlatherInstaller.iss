@@ -2,9 +2,9 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "RoboBlather"
-#define MyAppVersion "1.2"
-#define MyAppPublisher "Zeta Centauri"
-#define MyAppURL "http://zetacentauri.com/software_roboblather.htm"
+#define MyAppVersion "1.21"
+#define MyAppPublisher "Jason Champion"
+#define MyAppURL "https://github.com/Xangis/RoboBlather"
 #define MyAppExeName "RoboBlather.exe"
 
 [Setup]
@@ -24,7 +24,7 @@ DefaultGroupName=Zeta Centauri\RoboBlather
 DisableProgramGroupPage=yes
 LicenseFile=C:\Users\Xangis\code\RoboBlather\License.txt
 OutputDir=C:\Users\Xangis\code\RoboBlather\Installer
-OutputBaseFilename=RoboBlather1.2Setup
+OutputBaseFilename=RoboBlather1.21Setup
 SetupIconFile=C:\Users\Xangis\code\RoboBlather\RoboBlather.ico
 UninstallDisplayIcon={app}\RoboBlather.ico
 Compression=lzma
