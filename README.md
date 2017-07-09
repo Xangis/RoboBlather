@@ -62,7 +62,7 @@ probably have to modify the paths in order for it to work on your system.
 
 # Changelog
 
-﻿### Changes in Version 1.21 (July 2017):
+### Changes in Version 1.21 (July 2017):
 
 - Added "Load Text" button to load a text file.
 
