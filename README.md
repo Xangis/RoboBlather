@@ -38,7 +38,7 @@ and in many cases new voices can be added.
 If you're on Windows 10, you can add the UK English voice Hazel by following these 
 instructions: http://superuser.com/questions/956810/how-do-you-add-the-microsoft-hazel-text-to-speech-voice-back-to-windows-10. 
 In addition, Microsoft Mike, Sam, and Mary can be added using the Microsoft TTS Voices 
-v1.3 installer found in this forum thread: 
+v1.3 installer found in this forum thread (there's also an installer for Anna): 
 http://www.eightforums.com/customization/23916-microsoft-anna-windows-8-a-6.html.
 
 This was originally released at http://zetacentauri.com/software_roboblather.htm 
