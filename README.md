@@ -69,6 +69,7 @@ probably have to modify the paths in order for it to work on your system.
 ### Changes in Version 1.2:
 
 - Interface changed from black and yellow to non-inverse (plain) colors.
+- Word wrap added to text input box.
 
 ### Changes in Version 1.1:
 
