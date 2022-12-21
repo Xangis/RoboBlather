@@ -104,6 +104,7 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -119,9 +120,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="RoboBlather.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Changes.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
